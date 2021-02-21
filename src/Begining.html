@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIFA'S DRUM PAD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+
+</head>
+    <style>
+
+    body{
+
+        justify-content: center;
+        background-image: url('https://webgradients.com/public/webgradients_png/059%20Teen%20Notebook.png');
+        background-size: 100%;
+        
+        
+    }
+
+    #title{
+        text-align: center;
+        font-family: monospace;
+        font-size: 55px;
+        
+    }
+
+    .drum_pad{
+        display:grid;
+        grid-template-columns: 150px 150px 150px 150px;
+        grid-template-rows: 150px 150px 150px;
+        grid-gap:10px;
+        justify-self: center;
+    }
+
+    .both_pads{
+        position: relative;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 500px;
+        align-content: center;
+        color: black;
+
+    }
+
+    .text{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-content: center;
+        border-width: 10px;
+        text-align: center;
+        color: black;
+        font-family: 'DotGothic16', sans-serif;
+    }
+
+    #keyboard_Image{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+        margin-bottom: 3%;
+
+ 
+    }
+
+    .synth_pad{
+        display:grid;
+        grid-template-columns: 150px 150px 150px 150px;
+        grid-template-rows: 150px 150px 150px;
+        grid-gap:10px;
+        justify-self: center;
+
+    }
+
+
+    .drum_pad_button_blue{
+        width:100%;
+        height:100%;
+        background-color: rgb(0, 255, 255, 0.65);
+        border-radius: 10%;
+        border-style: double;
+        border-width: 10px;
+        border-color: rgba(255, 255, 255, 0.473);
+
+    }
+
+    .drum_pad_button_purple{
+        width:100%;
+        height:100%;
+        background-color: rgb(148, 0, 211, 0.65);
+        border-radius: 10%;
+        border-style: double;
+        border-width: 10px;
+        border-color: rgba(255, 255, 255, 0.473);
+        
+    }
+
+    .drum_pad_button_orange{
+        width:100%;
+        height:100%;
+        background-color: rgba(236, 115, 35, 0.884);
+        border-radius: 10%;
+        border-style: double;
+        border-width: 10px;
+        border-color: rgba(255, 255, 255, 0.473);
+        
+    }
+
+    .drum_pad_button_yellow{
+        width:100%;
+        height:100%;
+        background-color: rgba(251, 255, 7, 0.815);
+        border-radius: 10%;
+        border-style: double;
+        border-width: 10px;
+        border-color: rgba(255, 255, 255, 0.473);
+        font-family: 'DotGothic16', sans-serif;
+        
+    }
+
+    h3{
+        font-family: monospace;
+        font-size: 15px;
+        grid-area: auto;
+        font-family: 'DotGothic16', sans-serif;
+    }
+
+    .instructions_bottom{
+        position:relative;
+        width:1erm;
+        
+    }
+
+    .footer{
+        
+        bottom:0px;
+        width:100%; 
+        font-size: small; 
+        font-family: 'DotGothic16', sans-serif;   
+    }
+
+    .media{
+        float: right;     
+    }
+
+    .media_pic{
+        height: 25px;
+        width: 25px;
+    }
+
+
+
+    
+
+</style>
+
+<body>
+    <header>
+        <h1 id="title">HIFA DRUM PAD</h1>
+    </header>
+    <div class="instructions_top">
+        <div class="text">
+            <h3 id="Drums_text">Drums </h3>
+            <h3 id="Synth_text">Synth </h3>
+        </div>
+    </div>
+    <div class="both_pads">
+
+        <div class="drum_pad">
+            
+            <div id="pad1">
+                <audio id="pad1_sound" > 
+                    <source src="..\Resources\Drums\8 bit with sub.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_blue" id="button1" onclick="playMusic('pad1_sound','button1')" type="button" accesskey="q" style="font-family: 'DotGothic16', sans-serif;">Kick</button>
+            </div>
+            <div id="pad2">
+                <audio id="pad2_sound"> 
+                    <source src="..\Resources\Drums\808-HiHats03.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_purple"   id="button2" onclick="playMusic('pad2_sound','button2')" type="button" style="font-family: 'DotGothic16', sans-serif;">Closed Hi Hat</button>
+            </div>
+            <div id="pad3">
+                <audio id="pad3_sound"> 
+                    <source src="..\Resources\Drums\808-Clap02.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_blue"  id="button3" onclick="playMusic('pad3_sound','button3')" type="button" style="font-family: 'DotGothic16', sans-serif;">Clap</button>
+            </div>
+            <div id="pad4">
+                <audio id="pad4_sound"> 
+                    <source src="..\Resources\Drums\808-Snare02.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_purple"  id="button4" onclick="playMusic('pad4_sound','button4')" type="button" style="font-family: 'DotGothic16', sans-serif;">Snare</button>
+            </div>
+            <div id="pad5">
+                <audio id="pad5_sound"> 
+                    <source src="..\Resources\Drums\Ramen.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_purple"  id="button5" onclick="playMusic('pad5_sound','button5')" type="button" style="font-family: 'DotGothic16', sans-serif;">Kick</button>
+            </div>
+            <div id="pad6">
+                <audio id="pad6_sound"> 
+                    <source src="..\Resources\Drums\808-OpenHiHats04.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_blue"  id="button6" onclick="playMusic('pad6_sound','button6')" type="button" style="font-family: 'DotGothic16', sans-serif;">Open Hi-Hat</button>
+            </div>
+            <div id="pad7">
+                <audio id="pad7_sound"> 
+                    <source src="..\Resources\Drums\808-Clap08.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_purple"  id="button7" onclick="playMusic('pad7_sound','button7')" type="button" style="font-family: 'DotGothic16', sans-serif;">Clap</button>
+            </div>
+            <div id="pad8">
+                <audio id="pad8_sound"> 
+                    <source src="..\Resources\Drums\808-Snare13.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_blue"  id="button8" onclick="playMusic('pad8_sound','button8')" type="button" style="font-family: 'DotGothic16', sans-serif;">Snare</button>
+            </div>
+            <div id="pad9">
+                <audio id="pad9_sound"> 
+                    <source src="..\Resources\Drums\808-Conga2.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_blue"  id="button9" onclick="playMusic('pad9_sound','button9')" type="button" style="font-family: 'DotGothic16', sans-serif;">Conga</button>
+            </div>
+            <div id="pad10">
+                <audio id="pad10_sound"> 
+                    <source src="..\Resources\Drums\808-Conga3.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_purple"  id="button10" onclick="playMusic('pad10_sound','button10')" type="button" style="font-family: 'DotGothic16', sans-serif;">Conga</button>
+            </div>
+            <div id="pad11">
+                <audio id="pad11_sound"> 
+                    <source src="..\Resources\Drums\Tribal-Shaker-01.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_blue"  id="button11" onclick="playMusic('pad11_sound','button11')" type="button" style="font-family: 'DotGothic16', sans-serif;">Shaker</button>
+            </div>
+            <div id="pad12">
+                <audio id="pad12_sound"> 
+                    <source src="..\Resources\Drums\Cymatics - Cobra Crash 3.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_purple"  id="button12" onclick="playMusic('pad12_sound','button12')" type="button" style="font-family: 'DotGothic16', sans-serif;">Crash</button>
+            </div>
+        </div>
+
+        
+        <div class="synth_pad">
+            
+            <div id="pad13">
+                <audio id="pad13_sound" > 
+                    <source src="8 bit with sub.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_orange" id="button13" onclick="playMusic('pad13_sound','button13')" type="button" accesskey="q" style="font-family: 'DotGothic16', sans-serif;">C</button>
+            </div>
+            <div id="pad14">
+                <audio id="pad14_sound"> 
+                    <source src="808-HiHats03.wav" type="audio /wav">
+                </audio>
+                <button class="drum_pad_button_yellow" id="button14" onclick="playMusic('pad14_sound','button14')" type="button" style="font-family: 'DotGothic16', sans-serif;" >C#</button>
+            </div>
+            <div id="pad15">
+                <audio id="pad15_sound"> 
+                    <source src="808-Clap02.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_orange" id="button15" onclick="playMusic('pad15_sound','button15')" type="button" style="font-family: 'DotGothic16', sans-serif;">D</button>
+            </div>
+            <div id="pad16">
+                <audio id="pad16_sound"> 
+                    <source src="808-Snare02.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_yellow" id="button16" onclick="playMusic('pad16_sound','button16')" type="button" style="font-family: 'DotGothic16', sans-serif;">D#</button>
+            </div>
+            <div id="pad17">
+                <audio id="pad17_sound"> 
+                    <source src="Ramen.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_yellow" id="button17" onclick="playMusic('pad17_sound','button17')" type="button" style="font-family: 'DotGothic16', sans-serif;">E</button>
+            </div>
+            <div id="pad18">
+                <audio id="pad18_sound"> 
+                    <source src="Ramen.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_orange" id="button18" onclick="playMusic('pad18_sound','button18')" type="button" style="font-family: 'DotGothic16', sans-serif;">F</button>
+            </div>
+            <div id="pad19">
+                <audio id="pad19_sound"> 
+                    <source src="Ramen.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_yellow" id="button19" onclick="playMusic('pad19_sound','button19')" type="button" style="font-family: 'DotGothic16', sans-serif;">F#</button>
+            </div>
+            <div id="pad20">
+                <audio id="pad20_sound"> 
+                    <source src="Ramen.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_orange" id="button20" onclick="playMusic('pad20_sound','button20')" type="button" style="font-family: 'DotGothic16', sans-serif;">G</button>
+            </div>
+            <div id="pad21">
+                <audio id="pad21_sound"> 
+                    <source src="Ramen.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_orange" id="button21" onclick="playMusic('pad21_sound','button21')" type="button" style="font-family: 'DotGothic16', sans-serif;">G#</button>
+            </div>
+            <div id="pad22">
+                <audio id="pad22_sound"> 
+                    <source src="Ramen.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_yellow" id="button22" onclick="playMusic('pad22_sound','button22')" type="button" style="font-family: 'DotGothic16', sans-serif;">A</button>
+            </div>
+            <div id="pad23">
+                <audio id="pad23_sound"> 
+                    <source src="Ramen.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_orange" id="button23" onclick="playMusic('pad23_sound','button23')" type="button" style="font-family: 'DotGothic16', sans-serif;">A#</button>
+            </div>
+            <div id="pad24">
+                <audio id="pad24_sound"> 
+                    <source src="Ramen.wav" type="audio/wav">
+                </audio>
+                <button class="drum_pad_button_yellow" id="button24" onclick="playMusic('pad24_sound','button24')" type="button" style="font-family: 'DotGothic16', sans-serif;">B</button>
+            </div>
+        </div>
+    </div>
+    <div class="instructions_bottom">
+        <div class="text">
+            <h3 id="Drums_text_bottom">Drums </h3>
+            <h3 id="Synth_text_bottom">Synth </h3>
+        </div>
+        <img id="keyboard_Image" src="..\Resources\Images\Keyboard.PNG" alt="keyboard">
+    </div>
+    <footer class="footer">
+        <p>Created by Francisco Couto (2021) <a class="media" target="_blank" href="https://www.linkedin.com/in/francisco-c-couto/"><img class="media_pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/1024px-Linkedin_icon.svg.png"/></a>
+            <a class="media" target="_blank" href="https://www.instagram.com/soumaisoumenoseu/"><img class="media_pic" src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300"/></a></p>
+    </footer>
+
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script> 
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <div id="output"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel"></script>
+
+    <script type="text/babel" scr="react.js"></script>
+
+    <script>
+        //JAVASCRIPT
+        var audioX;
+        var pad;
+        function playMusic(soundId, padID){
+            audioX= document.getElementById(soundId);
+            audioX.currentTime = 0;
+            audioX.pause();
+            audioX.play();
+            pad= document.getElementById(padID);
+            pad.style.backgroundColor ='rgba(211, 0, 88, 0.65)';
+            var x =setTimeout(function(){
+                if (pad.className==="drum_pad_button_blue"){
+                pad.style.backgroundColor ='rgb(0, 255, 255, 0.65)';}
+                if (pad.className==="drum_pad_button_purple"){
+                pad.style.backgroundColor ='rgb(148, 0, 211, 0.65)';
+                }
+                if (pad.className==="drum_pad_button_orange"){
+                pad.style.backgroundColor ='rgba(211, 84, 0, 0.815)';}
+                if (pad.className==="drum_pad_button_yellow"){
+                pad.style.backgroundColor ='rgba(251, 255, 7, 0.815)';
+                }
+                
+            },250);   
+        }
+
+        document.onkeydown = function (e) {
+            e = e || window.event;
+            switch (e.which || e.keyCode) {
+                case 81 : playMusic('pad1_sound','button1');
+                    break;
+                case 87 : playMusic('pad2_sound','button2');
+                    break;
+                case 69 : playMusic('pad3_sound','button3');
+                    break;
+                case 82 : playMusic('pad4_sound','button4');
+                    break;
+                case 65 : playMusic('pad5_sound','button5');
+                    break;
+                case 83 : playMusic('pad6_sound','button6');
+                    break;
+                case 68 : playMusic('pad7_sound','button7');
+                    break;
+                case 70 : playMusic('pad8_sound','button8');
+                    break;
+                case 90 : playMusic('pad9_sound','button9');
+                    break;
+                case 88 : playMusic('pad10_sound','button10');
+                    break;
+                case 67 : playMusic('pad11_sound','button11');
+                    break;
+                case 86 : playMusic('pad12_sound','button12');
+                    break;
+                
+                case 85 : playMusic('pad13_sound','button13');
+                    break;
+                case 73 : playMusic('pad14_sound','button14');
+                    break;
+                case 79 : playMusic('pad15_sound','button15');
+                    break;
+                case 80 : playMusic('pad16_sound','button16');
+                    break;
+                case 74 : playMusic('pad17_sound','button17');
+                    break;
+                case 75 : playMusic('pad18_sound','button18');
+                    break;
+                case 76 : playMusic('pad19_sound','button19');
+                    break;
+                case 192 : playMusic('pad20_sound','button20');
+                    break;
+                case 78 : playMusic('pad21_sound','button21');
+                    break;
+                case 77 : playMusic('pad22_sound','button22');
+                    break;
+                case 188 : playMusic('pad23_sound','button23');
+                    break;
+                case 190 : playMusic('pad24_sound','button24');
+                    break;
+            }
+    }
+
+
+    </script>
+    
+</body>
